@@ -21,24 +21,10 @@ class JunitTestSampleApplicationTests {
 	public void setUp() {
 	}
 
-	@Test
-	public void firstNameIsNotNull() {
-		Sample sample = new Sample();
-		sample.setFirstName("taro");
-		sample.setLastName("sample");
-		sample.setTelNum("012-3456-7890");
-
-		SampleController sampleController = new SampleController();
-		Result response = sampleController.exexute(sample);
-		boolean result = response.isResult();
-
-		assertTrue(result);
-	}
-
 //	@Test
-//	public void firstNameIsNull() {
+//	public void firstNameIsNotNull() {
 //		Sample sample = new Sample();
-////		sample.setFirstName("taro");
+//		sample.setFirstName("taro");
 //		sample.setLastName("sample");
 //		sample.setTelNum("012-3456-7890");
 //
@@ -48,4 +34,18 @@ class JunitTestSampleApplicationTests {
 //
 //		assertTrue(result);
 //	}
+
+	@Test
+	public void firstNameIsNull() {
+		Sample sample = new Sample();
+//		sample.setFirstName("taro");
+		sample.setLastName("sample");
+		sample.setTelNum("012-3456-7890");
+
+		SampleController sampleController = new SampleController();
+		Result response = sampleController.exexute(sample);
+		boolean result = response.isResult();
+
+		assertTrue(result);
+	}
 }

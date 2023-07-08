@@ -54,6 +54,7 @@ public class SampleController {
 			return true;
 		} else if (Objects.isNull(sample.getTelNum())) {
 			System.out.println("TelNum is Null");
+			return true;
 		}
 		return false;
 	}
